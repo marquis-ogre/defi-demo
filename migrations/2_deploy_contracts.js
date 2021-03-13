@@ -20,5 +20,5 @@ module.exports = async function(deployer, network, accounts) {
   await dappToken.transfer(tokenFarm.address, '1000000000000000000000000');
 
   // Transfer 100 Mock DAI tokens to investor (assume that accounts[0] => owner, accounts => investor)
-  await daiToken.transfer(accounts[1], '100000000000000000000');
+  await daiToken.transfer(process.env.DEV_ADDRESS, '100000000000000000000');
 };
